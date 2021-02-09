@@ -7,8 +7,6 @@ This is a project that computes the evolution of a
 one-dimensional difference equation given an initial condition.
 The script also reveals the associated Cobweb schematic.
 
-Read the ReadMe.pdf for the relevant theory behind the project.
-
 """
 
 import matplotlib.pyplot as plt
