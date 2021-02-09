@@ -19,7 +19,7 @@ Data_Points = 20
 
 ## -------------------------------------------------- ##
 
-def Function(x):
+def Function(x, n):
     # The user can freely change the functional form of this function.
     return x**2 - 1
 
@@ -28,13 +28,13 @@ def X(n):
     if (n == 0): # At n = 0, the sequence takes the value of the initial condition.
         return Initial_Condition
     elif (n > 0): # Else, for n > 0, the sequence is evalutated recursively.
-        return Function(X(n-1))
+        return Function(X(n-1), n - 1)
 
-Image = [] # This array collects the values of one-dimensional map.
+Image = [] # This array collects the values of Sequence X(n) for a pre-specified value of Data_Points.
 
 for i in range(Data_Points): 
     # For all the data points the user wishes to plot,
-    # We append the Image array with the i-th element of the Sequence.
+    # We append the Image array with the i-th element of the Sequence; from i = 0 to i = Data_Points
     Image.append(X(i))
     
 F_Domain = np.linspace(min(Image), max(Image), num = 1000) # This is the Domain of Function(x), for a given evolution of the sequence X.
@@ -60,8 +60,8 @@ ax.set_xlabel(r'$X_n$')
 ax.set_ylabel(r'$f(X_n)$')
 ax.set_title('Cobweb Schematic', fontsize = 13)
 
-P_X = []
-P_Y = []
+P_X = [] # This array collects all the x-coordinates of the points in the Cobweb plot.
+P_Y = [] # This array collects all the y-coordinates of the points in the Cobweb plot.
 
 for i in range(Data_Points):
     if (i == 0):
