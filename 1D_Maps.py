@@ -19,7 +19,7 @@ Data_Points = 20 # This variable stores the amount of data points the user wishe
 
 ## -------------------------------------------------- ##
 
-def Function(x, n):
+def Function(x):
     # This is the function F; defined above. The user can freely change the functional form of this function.
     return x**2 - 1
 
@@ -28,7 +28,7 @@ def X(n):
     if (n == 0): # At n = 0, the sequence takes the value of the initial condition.
         return Initial_Condition
     elif (n > 0): # Else, for n > 0, the sequence is evalutated recursively.
-        return Function(X(n-1), n - 1)
+        return Function(X(n-1))
 
 Image = [] # This array collects the values of Sequence X(n) for a pre-specified value of Data_Points.
 
