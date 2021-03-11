@@ -4,7 +4,7 @@ Created on Wed Nov 18 22:30:22 2020
 @author: Andreas Mastronikolis
 
 This is a project that computes the plot of the evolution of a
-one-dimensional difference equation of the form X_{n+1} = F(X_n)
+one-dimensional difference equation of the form X_{n+1} = F(X_n, n)
 given an initial condition. The script also reveals the associated Cobweb schematic.
 
 """
@@ -14,7 +14,7 @@ import numpy as np
 
 ## -------------------------------------------------- ##
 
-Initial_Condition = 0 # This variable stores the initial condition of the sequence; that is, X_0.
+Initial_Condition = 0.5 # This variable stores the initial condition of the sequence; that is, X_0.
 Data_Points = 20 # This variable stores the amount of data points the user wishes to plot.
 
 ## -------------------------------------------------- ##
@@ -41,12 +41,13 @@ F_Domain = np.linspace(min(Image), max(Image), num = 1000) # This is the Domain 
     
 # --------------- Plotting the Evolution of the Sequence ----------------------- #
     
-fig, ax = plt.subplots(nrows = 1, ncols = 1, figsize = (15,2.5))
-ax.grid(alpha = 1)
-ax.set_ylabel(r'$X_n$')
-ax.set_xlabel(r'$n$')
+fig, ax = plt.subplots(nrows = 1, ncols = 1, figsize = (15,5))
+ax.grid(alpha = 0.5, color = 'black')
+ax.set_ylabel(r'$X_n$', fontsize = 13)
+ax.set_title(r'Evolution of the Sequence $X_n$ as a function of $n$')
+ax.set_xlabel(r'$n$', fontsize = 13)
 ax.set_xticks(range(Data_Points))
-ax.plot(range(Data_Points), Image, 'o-k', markersize = 5, mec = 'black', mfc = 'white')
+ax.plot(range(Data_Points), Image, 's-.k', markersize = 7, mec = 'black', mfc = 'orange', alpha = 0.6)
 
 # ------------------------------------------------------------------------------ #
 
@@ -54,7 +55,7 @@ ax.plot(range(Data_Points), Image, 'o-k', markersize = 5, mec = 'black', mfc = '
 
 fig1, ax = plt.subplots(nrows = 1, ncols = 1, figsize = (10,8))
 ax.grid()
-ax.plot(F_Domain, Function(F_Domain), ls = '-', lw = 2, alpha = 0.8)
+ax.plot(F_Domain, Function(F_Domain), ls = '-.', lw = 2, alpha = 0.5)
 ax.plot(F_Domain, F_Domain, alpha = 0.4, lw = 2)
 ax.set_xlabel(r'$X_n$')
 ax.set_ylabel(r'$f(X_n)$')
