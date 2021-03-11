@@ -4,7 +4,7 @@ Created on Wed Nov 18 22:30:22 2020
 @author: Andreas Mastronikolis
 
 This is a project that computes the plot of the evolution of a
-one-dimensional difference equation of the form X_{n+1} = F(X_n, n)
+one-dimensional difference equation of the form X_{n+1} = F(X_n)
 given an initial condition. The script also reveals the associated Cobweb schematic.
 
 """
