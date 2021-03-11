@@ -3,9 +3,9 @@ Created on Wed Nov 18 22:30:22 2020
 
 @author: Andreas Mastronikolis
 
-This is a project that computes the evolution of a
-one-dimensional difference equation given an initial condition.
-The script also reveals the associated Cobweb schematic.
+This is a project that computes the plot of the evolution of a
+one-dimensional difference equation of the form X_{n+1} = F(X_n, n)
+given an initial condition. The script also reveals the associated Cobweb schematic.
 
 """
 
@@ -14,13 +14,13 @@ import numpy as np
 
 ## -------------------------------------------------- ##
 
-Initial_Condition = 0
-Data_Points = 20
+Initial_Condition = 0 # This variable stores the initial condition of the sequence; that is, X_0.
+Data_Points = 20 # This variable stores the amount of data points the user wishes to plot.
 
 ## -------------------------------------------------- ##
 
 def Function(x, n):
-    # The user can freely change the functional form of this function.
+    # This is the function F; defined above. The user can freely change the functional form of this function.
     return x**2 - 1
 
 def X(n):
