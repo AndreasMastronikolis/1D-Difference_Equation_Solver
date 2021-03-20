@@ -6,3 +6,6 @@ This 'python' project computes the evolution of a one-dimensional difference equ
 The script yields the two plots:
 
 ![](./Sample_Sequence.png)
+
+![](./Cobweb_Schematic.png)
+
