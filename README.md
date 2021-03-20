@@ -7,6 +7,5 @@ The script yields the two plots:
 
 ![](./Sample_Sequence.png)
 
-![](./Cobweb_Schematic.png)
 
 from which one can deduce that the map converges to the two-cycle -1, +1.
