@@ -9,4 +9,4 @@ The script yields the two plots:
 
 ![](./Cobweb.png)
 
-from which one can deduce that the map converges to the two-cycle -1, +1.
+from which one can deduce that the map converges to the two-cycle {0, -1}.
